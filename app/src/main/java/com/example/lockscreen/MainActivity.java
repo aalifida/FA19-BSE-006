@@ -113,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
                       startActivity(Login);
                   }
                   else {
-                      Toast.makeText(getApplicationContext(),"INCORRECT PASSWORD",Toast.LENGTH_SHORT);
+                      Toast.makeText(getApplicationContext(),"INCORRECT PASSWORD",Toast.LENGTH_SHORT).show();
+
                   }
                 }
             }
