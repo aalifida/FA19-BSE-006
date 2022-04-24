@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_1;
     private Button btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_10,btn_11,btn_12;
     String code="1234";
-
+    public int count=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +111,15 @@ public class MainActivity extends AppCompatActivity {
                 if (tv_1.getText().toString().equals(code)) {
                     Intent Login = new Intent(MainActivity.this, Success.class);
                     startActivity(Login);
+                }else{
+                    if(count<3)
+                    {
+                        Toast.makeText(MainActivity.this,"WRONG PASSWORD",Toast.LENGTH_SHORT).show();
+                        tv_1.setText(null);
+                        count++;
+                    }
+                    else
+                        finish();
                 }
             }
         });
