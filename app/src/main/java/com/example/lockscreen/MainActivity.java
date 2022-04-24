@@ -107,16 +107,17 @@ public class MainActivity extends AppCompatActivity {
         btn_12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              {
-                  if(tv_1.getText().toString().equals(code)) {
-                      Intent Login = new Intent(MainActivity.this, Success.class);
-                      startActivity(Login);
-                  }
-                  else {
-                      Toast.makeText(getApplicationContext(),"INCORRECT PASSWORD",Toast.LENGTH_SHORT).show();
 
-                  }
+                if (tv_1.getText().toString().equals(code)) {
+                    Intent Login = new Intent(MainActivity.this, Success.class);
+                    startActivity(Login);
                 }
+            }
+        });
+        btn_10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv_1.setText(null);
             }
         });
 
